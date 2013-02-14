@@ -7,10 +7,15 @@
 ;design convertFC: make a functin that takes a list of Fahrenheit measurements and
 ;convert them to Celsius
 
-;Conversion Factor
+;Conversion Factor HELPER FUNCTION
 (check-expect (convert 32) 0)
 (check-expect (convert 86) 30)
 
 (define (convert f)
   (/ (- f 32) 1.8))
 
+;Function aplied to list l
+(define (convert-list l)
+  (cond
+    [(empty=? l) ...]
+    [else (convert (first l))
