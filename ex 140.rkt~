@@ -7,9 +7,3 @@
 ;design convertFC: make a functin that takes a list of Fahrenheit measurements and
 ;convert them to Celsius
 
-;Conversion Factor
-(check-expect (convert 32) 0)
-
-(define (convert f)
-  (/ (- 32 f) 1.8))
-
