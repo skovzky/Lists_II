@@ -17,6 +17,6 @@
 ;Function aplied to list l
 (define (convert-list l)
   (cond
-    [(empty? l) ...]
-    [(cons?
-      ((convert (first l)) (convert (first (rest l)))))]))
+    [(empty? l) empty]
+    [(cons? l) (cons (convert (first l)) (convert-list (rest l)))]))
+
