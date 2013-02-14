@@ -5,6 +5,11 @@
 ;EX 143
 
 
+(define-struct work (employee rate hours))
+; Work is a structure: (make-work String Number Number).
+; interp. (make-work n r h) combines the name (n)
+; with the pay rate (r) and the number of hours (h) worked.
+
 ; Low -> List-of-numbers
 ; compute the weekly wages for all given weekly work records
  
@@ -20,4 +25,11 @@
 ; Work -> Number
 ; compute the wage for the given work record w
 (define (wage.v2 w)
-  (* (work-rate w) (work-hours w)))
+  (* (work-rate w) (work-hours w))) 
+
+
+;wage*.v3
+(define (wage*.v3 l)
+  (cond
+    [(empty? l) empty]
+    [(cons? l) (cons 
