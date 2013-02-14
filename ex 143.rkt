@@ -32,4 +32,5 @@
 (define (wage*.v3 l)
   (cond
     [(empty? l) empty]
-    [(cons? l) (cons 
+    [(cons? l) (cons (first l) (cons (wage*.v2 (first (rest l)))
+                                              (wage*.v2 (rest l))))]))
