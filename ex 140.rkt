@@ -9,7 +9,8 @@
 
 ;Conversion Factor
 (check-expect (convert 32) 0)
+(check-expect (convert 86) 30)
 
 (define (convert f)
-  (/ (- 32 f) 1.8))
+  (/ (- f 32) 1.8))
 
