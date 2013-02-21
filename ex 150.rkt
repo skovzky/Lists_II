@@ -2,4 +2,10 @@
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-beginner-abbr-reader.ss" "lang")((modname |ex 150|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
 ;robert heemann (THE GREAT VLADIMIR SKOVZKY)
-;EX 150 
+;EX 150
+
+;system requirements
+(require 2htdp/batch-io)
+
+;make the file a few lists
+(read-words/line "VSkovzky.txt")
