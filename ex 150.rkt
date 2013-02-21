@@ -8,4 +8,12 @@
 (require 2htdp/batch-io)
 
 ;make the file a few lists
-(read-words/line "VSkovzky.txt")
+(define doc (read-words/line "VSkovzky.txt"))
+
+;functions
+;takes the list doc and deletes the articles "a" "an" "the"
+(define i-hate-articles doc
+  (cond
+    [(empty? doc) empty]
+    [(cons? doc)
+     
